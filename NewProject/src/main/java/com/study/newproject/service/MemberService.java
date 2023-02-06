@@ -3,6 +3,8 @@ package com.study.newproject.service;
 import com.study.newproject.domain.Member;
 import com.study.newproject.repository.MemberRepository;
 import com.study.newproject.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;

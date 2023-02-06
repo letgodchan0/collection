@@ -32,7 +32,7 @@ class MemberServiceTest {
         Member findMember = memoryMemberRepository.findById(saveId).get();
         Assertions.assertEquals(member.getName(), findMember.getName());
     }
-    @Test
+    @Test 
     public void 중복_회원_예외() throws Exception {
         //Given
         Member member1 = new Member();
