@@ -1,9 +1,7 @@
 package com.study.newproject;
 
-import com.study.newproject.repository.JdbcMemberRepository;
-import com.study.newproject.repository.JpaMemberRepository;
+import com.study.newproject.aop.TimeTraceAop;
 import com.study.newproject.repository.MemberRepository;
-import com.study.newproject.repository.MemoryMemberRepository;
 import com.study.newproject.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -32,9 +30,14 @@ public class SpringConfig {
 
     @Bean
     public MemberService memberService() {
-
         return new MemberService(memberRepository);
     }
+
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }
+
 
 //    @Bean
 //    public MemberRepository memberRepository() {
